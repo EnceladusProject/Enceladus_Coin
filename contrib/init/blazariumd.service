@@ -1,0 +1,26 @@
+[Unit]
+Description=ENCP's distributed currency daemon
+After=network.target
+
+[Service]
+User=enceladus
+Group=enceladus
+
+Type=forking
+PIDFile=/var/lib/enceladusd/enceladusd.pid
+
+ExecStart=/usr/bin/enceladusd -daemon -pid=/var/lib/enceladusd/enceladusd.pid \
+          -conf=/etc/enceladus/enceladus.conf -datadir=/var/lib/enceladusd
+
+ExecStop=-/usr/bin/enceladus-cli -conf=/etc/enceladus/enceladus.conf \
+         -datadir=/var/lib/enceladusd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

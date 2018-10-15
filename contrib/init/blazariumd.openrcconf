@@ -1,0 +1,26 @@
+# /etc/conf.d/enceladusd: config file for /etc/init.d/enceladusd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/enceladus/enceladus.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/enceladusd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/enceladusd.pid"
+
+# Where to write enceladusd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/enceladusd"
+
+# User and group to own enceladusd process
+#BITCOIND_USER="enceladus"
+#BITCOIND_GROUP="enceladus"
+
+# Path to enceladusd executable
+#BITCOIND_BIN="/usr/bin/enceladusd"
+
+# Nice value to run enceladusd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

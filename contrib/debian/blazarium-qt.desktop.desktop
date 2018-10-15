@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ENCP
+Comment=ENCP P2P Cryptocurrency
+Exec=enceladus-qt %u
+Terminal=false
+Type=Application
+Icon=enceladus128
+MimeType=x-scheme-handler/enceladus;
+Categories=Office;Finance;
+Name[en_US]=enceladus-qt.desktop
